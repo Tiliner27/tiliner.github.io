@@ -1,0 +1,267 @@
+/* Fuente moderna y ajustes generales */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, #e3f2fd, #bbdefb);
+  animation: fondoMovimiento 20s infinite alternate;
+  color: #37474f;
+}
+.nav-button {
+  background-color: #007bff; /* Azul brillante */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.nav-button:hover {
+  background-color: #0056b3; /* Azul más oscuro al pasar el cursor */
+  transform: scale(1.05);
+}
+
+
+
+/* Contenedor relativo para el título para posicionar el confeti */
+.titulo-animado {
+  position: relative;
+  overflow: visible;
+}
+
+/* Estilo de cada pieza de confeti */
+.confetti {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: red; /* color base */
+  opacity: 0.9;
+  border-radius: 2px;
+  pointer-events: none;
+  animation-name: confetti-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+
+.testimonio {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform: rotate(0deg) scale(1);
+}
+
+.testimonio:hover {
+  transform: rotate(4deg) scale(1.02) translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* Animación del fondo */
+@keyframes fondoMovimiento {
+  0% {
+    background: linear-gradient(to right, #e3f2fd, #bbdefb);
+  }
+  100% {
+    background: linear-gradient(to right, #e1f5fe, #90caf9);
+  }
+}
+
+/* Encabezado */
+header {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(to right, #90caf9, #64b5f6);
+  color: #fff;
+  border-bottom: 5px solid #1976d2;
+}
+
+/* Animación bounce para el título */
+.titulo-animado {
+  font-size: 2.5rem;
+  animation: rebote 1.2s ease;
+  display: inline-block;
+  color: #ffffff;
+}
+
+@keyframes rebote {
+  0%   { transform: scale(1) translateY(0); }
+  30%  { transform: scale(1.1, 0.9) translateY(-10px); }
+  50%  { transform: scale(0.95, 1.05) translateY(5px); }
+  70%  { transform: scale(1.05, 0.95) translateY(-5px); }
+  100% { transform: scale(1) translateY(0); }
+}
+
+/* Contenedor de testimonios */
+.contenedor-testimonios {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Tarjeta de testimonio */
+.testimonio {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(21, 101, 192, 0.2);
+  display: flex;
+  align-items: center;
+  padding: 1.2rem;
+  gap: 1.5rem;
+  transform: translateX(-100%);
+  animation: aparecer 1s ease-out forwards;
+  transition: transform 0.5s ease-in-out;
+  border-left: 6px solid #64b5f6;
+}
+
+.testimonio:nth-child(even) {
+  transform: translateX(100%);
+}
+
+/* Animación de entrada */
+@keyframes aparecer {
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Imagen del testimonio */
+.testimonio img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #64b5f6;
+}
+
+/* Texto dentro del testimonio */
+.contenido h3 {
+  margin: 0;
+  color: #1565c0;
+}
+
+.contenido p {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+  color: #37474f;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #64b5f6;
+  color: white;
+}
+
+/* ------------------------ */
+/* 🔍 Media Queries        */
+/* ------------------------ */
+
+/* Tablets y mayores: dos columnas */
+@media (min-width: 768px) {
+  .contenedor-testimonios {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .testimonio {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+}
+
+/* Teléfonos: diseño vertical */
+@media (max-width: 767px) {
+  .contenedor-testimonios {
+    flex-direction: column;
+  }
+
+  .testimonio {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimonio img {
+    margin: 0 auto;
+  }
+}
+
+/* ----------- PRELOADER ----------- */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(250, 241, 241);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 2s ease;
+}
+
+#preloader img {
+  width: 700px;
+  animation: zoomIn 1.5s ease-in-out forwards;
+}
+
+#preloader.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* === Botón Regresar === */
+.nav-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: var(--primary);
+  color: var(--text-light);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  z-index: 100;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.nav-button:hover {
+  background-color: var(--primary-dark);
+}
+

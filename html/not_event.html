@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos y Noticias - Preparatoria Aztlán</title>
+  <link rel="stylesheet" href="../css/event.css">
+   
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <img src="../imagenes/transicion.jpg" alt=" Logo" />
+  </div>
+
+  <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+
+
+  <div class="floating-shapes">
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+
+  <button class="nav-button" onclick="window.history.back()">← Regresar</button>
+
+<header class="page-header">
+  <h1><span>Eventos</span> y Noticias</h1>
+</header>
+
+
+  <div class="container">
+    <div class="events-grid">
+
+      <!-- Evento 1 -->
+      <div class="event-card" onclick="openModal('Secretaría de Educación del Estado', this.querySelector('img').src, 'Un espacio clave para informar y concientizar sobre los riesgos que existen en el ciberespacio, donde menores de edad pueden ser vulnerables a situaciones de cyberbullying y otros peligros en línea.', '14 de Mayo, 2025', 'Académico')">
+        <div class="card-category">Foro</div>
+        <div class="card-image">
+          <img src="../imagenes/c1.jpg" alt="Calculadora">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title"> "Capacitación en Civismo Digital",</h3>
+          <div class="card-date">🗓 <span>14 de Mayo, 2025</span></div>
+          <p class="card-description"></p>
+        </div>
+      </div>
+
+      <!-- Evento 2 -->
+      <div class="event-card" onclick="openModal(' inauguración de la Feria del Grano y la Cantera 2025', this.querySelector('img').src, ' En agradecimiento  a los grupos que participaron y representaron a nuestro Colegio', '9 de Mayo, 2025', 'Cultural')">
+        <div class="card-category">Cultural</div>
+        <div class="card-image">
+          <img src="../imagenes/reyes.jpg" alt="Música">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Encuentros deportivos </h3>
+          <div class="card-date">🗓 <span>Mayo, 2025</span></div>
+          <p class="card-description"></p>
+        </div>
+      </div>
+
+      <!-- Evento 3 -->
+      <div class="event-card" onclick="openModal('Campeonato de Fútbol Preparatorias', this.querySelector('img').src, 'Nuestros alumnos lograron obtener 1er lugar en carrera de 100 y 200 mts, futbol varonil, basquetbol varonil y femenil, así como un segundo lugar en volibol varonil. ', '30 de Mayo, 2025', 'Actividades deportivas.')">
+        <div class="card-category">Deportivo</div>
+        <div class="card-image">
+          <img src="../imagenes/depor.jpg" alt="Fútbol">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Los encuentros deportivos son una forma de alimentar el alma</h3>
+          <div class="card-date">🗓 <span>30 de Mayo, 2025</span></div>
+          <p class="card-description"> ¡Apoyemos a nuestros deportistas!</p>
+        </div>
+      </div>
+
+      <!-- Evento 4 -->
+      <div class="event-card" onclick="openModal(' implementación de la Carrera en Ciencia de Datos e Información.', this.querySelector('img').src, 'CECyTE agradece la voluntad, compromiso y el trabajo colaborativo con autoridades estatales, municipales y Colegios Estatales para fortalecer la Educación Tecnológica en el país.', '', 'Actualización')">
+        <div class="card-category">Atualización</div>
+        <div class="card-image">
+          <img src="../imagenes/actual.jpg" alt="Laboratorio">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Coordinación Nacional de los CECyTE</h3>
+          <div class="card-date">🗓 <span>14 de Marzo, 2025</span></div>
+          <p class="card-description"></p>
+        </div>
+      </div>
+
+      <!-- Evento 5 -->
+      <div class="event-card" onclick="openModal('Los Comicos del CECYTEQ', this.querySelector('img').src, 'Compartiendo momentos de alegría fomentando el valor de compartir, participar y divertirse sanamente con el baile 💃 🕺 acompañados de La Banda La Efectiva 5ntrol. ', '10 de Junio, 2025', 'Internacional')">
+        <div class="card-category">Festivo</div>
+        <div class="card-image">
+          <img src="../imagenes/pastorela.jpg" alt="Globo">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Navidad CECYTEQ 2024</h3>
+          <div class="card-date">🗓 <span>9 de Diciembre, 2024</span></div>
+          <p class="card-description">¡Una experiencia única!</p>
+        </div>
+      </div>
+
+      <!-- Evento 6 -->
+      <div class="event-card" onclick="openModal('la firma de convenios de los 6 aprendices de la especialidad de electricidad y mantenimiento industrial,', this.querySelector('img').src, 'aprendices de la especialidad de electricidad y mantenimiento industrial, que ingresarán a educación dual a la empresa Rexroth a Bosch Company, a partir del 6 de enero. ', '15 de Junio, 2025', 'Emprendimiento')">
+        <div class="card-category">Educativo</div>
+        <div class="card-image">
+          <img src="../imagenes/hola.jpg" alt="Bombilla">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Firma de convenios</h3>
+          <div class="card-date">🗓 <span>15 de Junio, 2025</span></div>
+          <p class="card-description"></p>
+        </div>
+      </div>
+
+      <!-- Evento 5 -->
+      <div class="event-card" onclick="openModal('CONCURSO ESTATAL', this.querySelector('img').src, 'Nuestros estudiantes del grupo de 5B de Electricidad participaron en el plantel Queretaro en Cerrito Colorado este 8 de noviembre, reconocemos su gran esfuerzo y compromiso por ser cada vez mejores estudiantes, enhorabuena!', '10 de Junio, 2025', 'Internacional')">
+        <div class="card-category">Internacional</div>
+        <div class="card-image">
+          <img src="../imagenes/robo.jpg" alt="Globo">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">MINI SUMO ROBÓTICA</h3>
+          <div class="card-date">🗓 <span>11 de Noviembre, 2024</span></div>
+          <p class="card-description">¡Una experiencia única!</p>
+        </div>
+      </div>
+
+      <!-- Evento 6 -->
+      <div class="event-card" onclick="openModal(' 1er Concurso de Matemáticas y Ciencias Experimentales,', this.querySelector('img').src, 'Fue un concurso innovador, rompiendo el clásico concurso de conocimientos teórico, y dicho concurso se disfrutó por los alumnos, docentes de las áreas y autoridades, ya que manifestaron directores del Edo. De México que la dinámica fue diferente..', '15 de Junio, 2025', 'Emprendimiento')">
+        <div class="card-category">Educativo</div>
+        <div class="card-image">
+          <img src="../imagenes/concur.jpg" alt="Bombilla">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Concurso de Matemáticas y Ciencias Experimentales</h3>
+          <div class="card-date">🗓 <span>15 de Junio, 2025</span></div>
+          <p class="card-description"></p>
+        </div>
+      </div>
+
+<!-- Evento 6 -->
+      <div class="event-card" onclick="openModal('mega desfile denominado “La Marcha de los difuntos”', this.querySelector('img').src, 'En agradecimiento es para todos ustedes mi querida gente de Pedro Escobedo, con su participación en estos días iluminan cada espacio, cada calle, cada jardín, en nuestro panteón municipal,', '2 de Noviembre, 2024', 'Festival')">
+        <div class="card-category">Festival</div>
+        <div class="card-image">
+          <img src="../imagenes/muertos.jpg" alt="Bombilla">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">La Marcha de los difuntos</h3>
+          <div class="card-date">🗓 <span>2 de Noviembre, 2024</span></div>
+          <p class="card-description"></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="eventModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-header-content">
+          <h2 id="modalTitle"></h2>
+          <p id="modalDate"></p>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-body-content">
+          <img id="modalIcon" class="modal-icon" src="" alt="">
+          <p id="modalDescription"></p>
+          <button class="close-btn" onclick="closeModal()">✖ Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    const modal = document.getElementById('eventModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDate = document.getElementById('modalDate');
+    const modalIcon = document.getElementById('modalIcon');
+    const modalDescription = document.getElementById('modalDescription');
+
+    function openModal(title, iconSrc, description, date, category) {
+      modalTitle.textContent = title;
+      modalDate.textContent = date;
+      modalIcon.src = iconSrc;
+      modalIcon.alt = `Ícono para ${title}`;
+      modalDescription.textContent = description;
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      modal.classList.add('modal-open');
+    }
+
+    function closeModal() {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+      modal.classList.remove('modal-open');
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+          closeModal();
+        }
+      });
+
+      const cards = document.querySelectorAll('.event-card');
+      cards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(50px)';
+        card.style.transition = 'all 0.6s ease';
+        setTimeout(() => {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, index * 200);
+      });
+
+      cards.forEach(card => {
+        card.addEventListener('mouseenter', function () {
+          this.style.transform = 'translateY(-10px) scale(1.02)';
+        });
+        card.addEventListener('mouseleave', function () {
+          this.style.transform = 'translateY(0) scale(1)';
+        });
+      });
+
+      window.addEventListener('scroll', function () {
+        const scrolled = window.pageYOffset;
+        const shapes = document.querySelectorAll('.shape');
+        shapes.forEach((shape, index) => {
+          const speed = 0.5 + (index * 0.2);
+          shape.style.transform = `translateY(${scrolled * speed}px)`;
+        });
+      });
+
+      window.addEventListener('orientationchange', function () {
+        setTimeout(() => {
+          window.dispatchEvent(new Event('resize'));
+        }, 100);
+      });
+    });
+  </script>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      preloader.classList.add('fade-out');
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 2000);
+    });
+  </script>
+</body>
+</html>

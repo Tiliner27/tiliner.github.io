@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galería - CECYTEQ</title>
+  <link rel="stylesheet" href="../css/galeria.css" />
+</head>
+<body>
+   
+      <a href="../index.html" class="btn-regresar" title="Regresar">Regresar al inicio</a>
+
+  <i class="fas fa-arrow-left"></i>
+</a>
+  <!-- Preloader -->
+  <div id="preloader">
+    <img src="../imagenes/transicion.jpg" alt=" Logo" />
+  </div>
+
+  <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+  <div class="floating-shapes">
+    <div class="shape"></div><div class="shape"></div><div class="shape"></div><div class="shape"></div>
+    <div class="shape"></div><div class="shape"></div><div class="shape"></div><div class="shape"></div>
+    <div class="shape"></div><div class="shape"></div><div class="shape"></div><div class="shape"></div>
+    <div class="shape"></div><div class="shape"></div><div class="shape"></div>
+  </div>
+
+  <h1>Galería de Nuestra Escuela</h1>
+
+  <div class="galeria">
+    <div class="galeria-item"><img src="../imagenes/foto1.jpeg" alt="Foto 1"><div class="caption">Primera foto</div></div>
+    <div class="galeria-item"><img src="../imagenes/foto2.jpeg" alt="Foto 2"><div class="caption">Ceremonia</div></div>
+    <div class="galeria-item"><img src="../imagenes/foto3.jpeg" alt="Foto 3"><div class="caption">Altar dia de muertos</div></div>
+    <div class="galeria-item"><img src="../imagenes/foto4.jpeg" alt="Foto 4"><div class="caption">Ceremonia</div></div>
+    <div class="galeria-item"><img src="../imagenes/foto5.jpeg" alt="Foto 5"><div class="caption">Dia de muertos</div></div>
+    <div class="galeria-item"><img src="../imagenes/foto6.jpeg" alt="Foto 6"><div class="caption">Desfile</div></div>
+    <div class="galeria-item"><img src="../imagenes/foto7.jpeg" alt="Foto 7"><div class="caption">Feria academica</div></div>
+    <div class="galeria-item"><img src="../imagenes/foto8.jpeg" alt="Foto 8"><div class="caption">Celebracion</div></div>
+    <div class="galeria-item"><img src="../imagenes/foto9.jpeg" alt="Foto 9"><div class="caption">Propuestas Academicas</div></div>
+    <div class="galeria-item"><img src="../imagenes/foto10.jpeg" alt="Foto 10"><div class="caption">Pastorela</div></div>
+    <div class="galeria-item"><img src="../imagenes/foto11.jpeg" alt="Foto 11"><div class="caption">Equipo femenil</div></div>
+    <div class="galeria-item"><img src="../imagenes/foto12.jpeg" alt="Foto 12"><div class="caption">Reconocimiento</div></div>
+    <div class="galeria-item"><img src="../imagenes/foto13.jpeg" alt="Foto 13"><div class="caption">Equipo masculino</div></div>
+    <div class="galeria-item"><img src="../imagenes/foto14.jpeg" alt="Foto 14"><div class="caption">Representacion</div></div>
+    <div class="galeria-item"><img src="../imagenes/foto15.jpeg" alt="Foto 15"><div class="caption">Reyes del Cecyteq</div></div>
+  </div>
+
+  <div class="redes-footer">
+    <a href="https://www.facebook.com/share/1AhRubhXRG/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook CECYTEQ">
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#1877F2" viewBox="0 0 24 24" >
+        <path d="M22.676 0H1.326C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.326 24h11.49v-9.294H9.691v-3.622h3.125V8.413c0-3.1 1.893-4.788 4.658-4.788 1.325 0 2.464.099 2.795.143v3.24l-1.917.001c-1.504 0-1.795.715-1.795 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116c.732 0 1.326-.593 1.326-1.326V1.326C24 .593 23.407 0 22.676 0z"/>
+      </svg>
+      Facebook CECYTEQ
+    </a>
+  </div>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      preloader.classList.add('fade-out');
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 2000);
+    });
+  </script>
+
+<script>
+  // Preloader
+  window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    preloader.classList.add('fade-out');
+    setTimeout(() => {
+      preloader.style.display = 'none';
+    }, 2000);
+  });
+
+  // Animación rompecabezas para las imágenes de galería
+  document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.galeria-item');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    items.forEach(item => observer.observe(item));
+  });
+</script>
+
+
+</body>
+</html>
